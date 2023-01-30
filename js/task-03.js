@@ -18,11 +18,8 @@ const gallery = document.querySelector(`.gallery`);
 const imagesGallery = images
   .map(
     (image) =>
-      `<li><img src="${image.url}" alt="${image.alt}" style="width:500px; height: auto"> </li>`
+      `<li><img src="${image.url}" alt="${image.alt}"> </li>`
   )
   .join("");
 gallery.insertAdjacentHTML(`beforeEnd`, imagesGallery);
 
-gallery.style.display = "flex";
-gallery.style.flexWrap = "wrap";
-gallery.style.listStyle = "none";
